@@ -68,7 +68,18 @@ export default function App() {
 
 ### Documentation
 
-Full documentation for the open-source version is available [here](https://your-docs-url.com).
+#### Directory Structure
+
+```
+src/
+├── components/  # React components
+├── hooks/       # Custom React hooks
+├── lib/         # Utility functions and helpers
+└── index.ts     # Main entry point
+```
+
+
+Full documentation for the open-source version is available [here](https://docs.onboard.io).
 
 ---
 
@@ -80,7 +91,7 @@ Unlock the full potential of Boardroom with the Pro version:
 2. Backend support for persistence and authentication.
 3. Priority support for your projects.
 
-Interested? [Contact us](mailto:support@boardroom.io) or visit [our website](https://boardroom.io) for more information.
+Interested? [Contact us](mailto:team@onboard.io) or visit [our website](https://onboard.io) for more information.
 
 ---
 
