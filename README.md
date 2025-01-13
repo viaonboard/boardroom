@@ -2,7 +2,8 @@
 
 **The Ultimate Open-Source Dashboard Builder for React Applications**
 
-![Boardroom Logo](https://your-image-url.com/logo.png)
+![image](https://github.com/user-attachments/assets/50010e17-c89c-48a1-9837-5f3c1c766816)
+
 
 Boardroom is a powerful, open-source dashboard creation package for React and Next.js applications. Designed with flexibility and simplicity in mind, Boardroom enables developers to quickly create customizable, responsive dashboards tailored to their needs.
 
@@ -103,9 +104,8 @@ Boardroom’s open-source core is licensed under the [MIT License](LICENSE). The
 
 ## 🌟 **Community and Support**
 
-- Join our [Discord Community](https://discord.gg/your-invite) for discussions and help.
 - Follow us on [Twitter](https://twitter.com/boardroom).
-- Explore our [Roadmap](https://github.com/your-repo/issues).
+- Explore our [Roadmap](https://github.com/viaonboard/boardroom/issues).
 
 ---
 
@@ -114,7 +114,7 @@ Boardroom’s open-source core is licensed under the [MIT License](LICENSE). The
 If you find Boardroom helpful, please give us a star on GitHub! It helps us grow and reach more developers.
 
 ```bash
-git clone https://github.com/your-repo/boardroom
+git clone https://github.com/viaonboard/boardroom
 ```
 
 Happy building with **Boardroom**!
