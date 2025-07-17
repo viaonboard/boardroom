@@ -1,6 +1,18 @@
-// Export components, hooks, and utilities here
-export { DashboardContent } from './components/dashboard-content';
-export { Widget } from './components/widget';
-export { WidgetSideboard } from './components/widget-sideboard';
-export { FilterDialog } from './components/filter-dialog';
-export { DateRangePicker } from './components/date-range-picker';
+// Main component exports
+export { DashboardWidget } from '../dashboard-widget';
+export { BaseWidget } from './components/base-widget';
+export { DynamicWidget } from './widgets/dynamic-widget';
+
+// Type exports
+export type {
+    BaseWidgetProps, ChartSettings, DashboardConfig, DashboardView,
+    DashboardWidgetProps, FilterConfig,
+    FilterField,
+    FilterValues, PropertyFilterParams,
+    SavedFilter, WidgetConfig,
+    WidgetData,
+    WidgetProps
+} from './types';
+
+// Utility exports
+export { cn } from './lib/utils';

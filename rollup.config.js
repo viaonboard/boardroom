@@ -1,28 +1,39 @@
-import typescript from 'rollup-plugin-typescript2';
-import pkg from './package.json';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
+import dts from 'rollup-plugin-dts';
 
-export default {
-  input: 'src/index.ts',
-  output: [
-    {
-      file: pkg.main,
-      format: 'cjs',
-      exports: 'named',
-      sourcemap: true,
-      strict: false
-    },
-    {
-      file: pkg.module,
-      format: 'esm',
-      exports: 'named',
-      sourcemap: true
-    }
-  ],
-  plugins: [
-    typescript({
-      tsconfig: 'tsconfig.json'
-    })
-  ],
-  external: ['react', 'react-dom']
-};
+const packageJson = require('./package.json');
 
+export default [
+  {
+    input: 'src/index.ts',
+    output: [
+      {
+        file: packageJson.main,
+        format: 'cjs',
+        sourcemap: true,
+      },
+      {
+        file: packageJson.module,
+        format: 'esm',
+        sourcemap: true,
+      },
+    ],
+    plugins: [
+      resolve(),
+      commonjs(),
+      typescript({ tsconfig: './tsconfig.json' }),
+    ],
+    external: [
+      ...Object.keys(packageJson.peerDependencies || {}),
+      ...Object.keys(packageJson.dependencies || {}),
+    ],
+  },
+  {
+    input: 'dist/types/index.d.ts',
+    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
+    plugins: [dts()],
+    external: [/\.css$/],
+  },
+]; 
